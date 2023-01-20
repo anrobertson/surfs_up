@@ -1,7 +1,7 @@
 # surfs_up
 
 ## Overview of analysis
-For this analysis, I was responsible for for building a weather analysis for the island on Hawaii that I would like to open up a Surf and Shake stop for. This analysis would provide the information needed to know if the shop could be substantial year-round.
+Responsible for for building a weather analysis for the island on Hawaii and provide the information needed to know if a surf shop could be substantial year-round.
 
 ## Resources
 Software used:
