@@ -1,7 +1,7 @@
 # surfs_up
 
 ## Overview of analysis
-Responsible for for building a weather analysis for the island on Hawaii and provide the information needed to know if a surf shop could be substantial year-round.
+Tasked with constructing a comprehensive weather analysis for the Hawaiian island, with a view to determining the viability of a surf shop's sustained operation throughout the year.
 
 ## Resources
 Software used:
@@ -17,7 +17,7 @@ Data Source:
 hawaii.sqlite
 
 ## Results
-The first step I took was extracting the data. Using Jupyter Notebook, I imported all of my dependencies and then imported the SQL toolkit.
+My initial approach involved data extraction, commencing with importing all the required dependencies in Jupyter Notebook, followed by importing the SQL toolkit.
 
 
 ```
@@ -34,7 +34,7 @@ from sqlalchemy import create_engine, func
 ```
 
 
-I wrote a query that filters the Measurement table to retrieve the temperatures for the month of June and December.
+I constructed a query to filter the Measurement table and retrieve the temperature readings specifically for the months of June and December.
 
 ### Query code for June
 
@@ -51,7 +51,7 @@ dec_temperatures= session.query(Measurement.date, Measurement.tobs).filter(extra
 print(dec_temperatures)
 ```
 
-After collecting the temperatures for the month of both June and December, I created a DataFrame with a "Date" column and a "June Temps"/"December Temps" column and used the .describe() method to show my results.
+Upon successful retrieval of temperature data for June and December, I proceeded to create a DataFrame featuring a "Date" column and columns for "June Temps" and "December Temps". Further, I utilized the ".describe()" method to present a comprehensive summary of my results.
 
 ![](Images/Junetempslist.png)
 ![](Images/decembertempslist.png)
@@ -62,7 +62,7 @@ From our findings above the key differences between June and December are:
 * The temperatures of both months stay pretty consistent with the std being around 3/4.
 
 ## Summary
-With the trending forecasts and temperatures, we can see that Oahu will be a strategic place to set up the Surf shop without weather and temperatures being a threat to business and seeing the little difference between June and December confirms that.
+Based on the current forecasts and temperature trends, it is evident that Oahu represents a strategic location for establishing the Surf Shop, with minimal risk posed by weather fluctuations. This observation is reinforced by the marginal differences between the temperature readings for June and December.
 
 
 
